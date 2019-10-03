@@ -5,7 +5,8 @@
     "cdk": "bin/cdk.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "rm -rf cdk.out && tsc && cdk synthesize -o .",
+    "deploy": "rm -rf cdk.out && cdk deploy --require-approval=never",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
