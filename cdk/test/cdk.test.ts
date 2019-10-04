@@ -5,7 +5,7 @@ import Cdk = require('../lib/cdk-stack');
 test('Empty Stack', () => {
     const app = new cdk.App();
     // WHEN
-    const stack = new Cdk.CdkStack(app, 'MyTestStack');
+    const stack = new Cdk.PyPiS3Stack(app, 'MyTestStack');
     // THEN
     expectCDK(stack).to(matchTemplate({
       "Resources": {}
